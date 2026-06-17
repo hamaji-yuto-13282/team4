@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('password');
-            $table->rememberToken(); // ログイン状態を保持する
-            // $table->timestamps();　// create_at,update_atカラムが自動作成される
         });
     }
 

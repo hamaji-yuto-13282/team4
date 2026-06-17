@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('user_info', function (Blueprint $table) {
             $table->id();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
-            $table->string('password');
-            $table->rememberToken(); // ログイン状態を保持する
-            // $table->timestamps();　// create_at,update_atカラムが自動作成される
+            $table->string('address');
+            $table->string('tel');
+            $table->string('email');
         });
     }
 
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('user_info');
     }
 };
