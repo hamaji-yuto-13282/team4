@@ -1,0 +1,7 @@
+<header>
+    <h1><a href="/items">SayYOU</a></h1>
+
+    {{ $account->name }} さんがログイン中
+
+    <a href="/logout">ログアウト</a>
+</header>
