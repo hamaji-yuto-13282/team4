@@ -18,6 +18,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+    // 配列を使って代入することができる項目
     protected $fillable = [
         'name',
         'email',
@@ -29,6 +30,8 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+    // hidden:この項目はDBから取得されない
     protected $hidden = [
         'password',
         'remember_token',

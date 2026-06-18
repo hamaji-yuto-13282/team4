@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -17,11 +18,12 @@ class AccountController extends Controller
         return view('login');
     }
 
-    public function signup()
+    public function signup(RegisterRequest $request)
     {
         $errorList = ['エラーいっぱいあるよ'];
         return view('accountform',['errorList' => $errorList]);
     }
+
     
     public function createUser(Request $request) {
 
