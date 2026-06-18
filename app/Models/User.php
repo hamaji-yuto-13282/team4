@@ -13,6 +13,8 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
+    public $timestamps = false;    
+
     /**
      * The attributes that are mass assignable.
      *
@@ -34,7 +36,6 @@ class User extends Authenticatable
     // hidden:この項目はDBから取得されない
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     /**
@@ -45,7 +46,6 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
     }

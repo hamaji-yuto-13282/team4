@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,8 +14,11 @@ Route::post('/login', [AccountController::class, 'login']);
 
 Route::post('/logout', [AccountController::class, 'logout']);
 
-Route::get('/register', [AccountController::class, 'signup']);
-Route::post('/register', [AccountController::class, 'createUser']);
+// 学習用：RegisterController
+Route::get('/register',  [RegisterController::class, 'showRegistrationForm'])
+->name(('register'));
+Route::post('/register', [RegisterController::class, 'register']);
+
 
 // // ShoppingController (仮：ProductController)
 // Route::get('/products', [ShoppingController::class], 'products');

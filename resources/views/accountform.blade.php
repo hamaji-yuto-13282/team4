@@ -41,18 +41,6 @@ $email    = $email ?? "";
                     </td>
                 </tr>
                 <tr>
-                    <th>住所</th>
-                    <td>
-                        <input type="text" name="address" value="<?= htmlspecialchars($address) ?>">
-                    </td>
-                </tr>
-                <tr>
-                    <th>電話番号</th>
-                    <td>
-                        <input type="text" name="tel" value="<?= htmlspecialchars($tel) ?>">
-                    </td>
-                </tr>
-                <tr>
                     <th>e-mail</th>
                     <td>
                         <input type="text" name="email" value="<?= htmlspecialchars($email) ?>">
