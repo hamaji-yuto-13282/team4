@@ -24,8 +24,7 @@ class RegisterController extends Controller
         // ユーザーを生成、DBへ追加
         $user = User::create($validated);
 
-        var_dump($user);
-
+        var_dump($user);      
         // ユーザーをログインさせる
         Auth::login($user);
         // セッション再生成

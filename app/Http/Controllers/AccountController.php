@@ -24,7 +24,6 @@ class AccountController extends Controller
         return view('accountform',['errorList' => $errorList]);
     }
 
-    
     public function createUser(Request $request) {
 
         $name = $request->input('name');
